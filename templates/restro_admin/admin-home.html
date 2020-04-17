@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block common %}
+
+    {% load static %}
+
+    {% if request.session.santosh %}
+    <table align="center" border="0">
+    <tr>
+        <th>
+            {% include 'restro_admin/menu.html' %}
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+                <table align="center" border="2">
+                    <tr>
+                        <th>
+                            <img src="{% static 'admin.png' %}" width="150" height="150">
+                        </th>
+                    </tr>
+                </table>
+        </th>
+    </tr>
+    </table>
+      {% else %}
+
+        <h3 style="text-align: center;font-family: 'Agency FB';font-size: 25px;color: red">
+            Please Do Login
+        </h3>
+
+      {% endif %}
+
+
+
+
+
+{% endblock %}
