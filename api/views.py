@@ -8,5 +8,5 @@ class StateModelViewset(viewsets.ModelViewSet):
 
     queryset = StateModel.objects.all()
     serializer_class = StateSerializer
-    lookup_field = 'state_name'
+    lookup_field = 'state_no'
 
